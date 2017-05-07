@@ -1,6 +1,7 @@
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
+*  background-color #fff;
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
  * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
@@ -24,7 +25,6 @@ input {
   margin-bottom: 1em;
 }
 #content {
-  background-color #fff;
   border: 10px solid #ccc;
   padding: 10px 10px 20px 10px;
   background: #fff;
