@@ -4,7 +4,7 @@
 - Written in 2.2.6 - probably works fine with 2.3.x
 
 * System dependencies
-- RoR 4
+- RoR 5
 
 * Configuration
 - Nothing special, just using a sqlite3 database. Any backend should work (mysql/postgres/etc)

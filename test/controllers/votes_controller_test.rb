@@ -2,23 +2,20 @@ require 'test_helper'
 
 class VotesControllerTest < ActionDispatch::IntegrationTest
 
-  test "show story" do
-    get story_path(stories(:one))
-    assert_response :success
-    assert response.body.include?(stories(:one).name)
-  end
-
-  test "show story vote elements" do
-    get story_path(stories(:one))
-    assert_select 'h2 span#vote_score'
-    assert_select 'ul#vote_history li', count: 2
-    assert_select 'div#vote_form form'
-  end
-
   test "creates vote" do
     assert_difference 'stories(:two).votes.count' do
       post story_votes_path(stories(:two))
     end
+  end
+
+  test "create vote with ajax" do
+    post story_votes_path(stories(:two)), xhr: true
+    assert_response :success
+  end
+
+  test "redirect after vote with http post" do
+    post story_votes_path(stories(:two))
+    assert_redirected_to story_path(stories(:two))
   end
 
 end

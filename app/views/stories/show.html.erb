@@ -2,9 +2,8 @@
   <span id="vote_score">
     Score: <%= @story.votes.size %>
   </span>
+	<%= @story.name %>
 </h2>
-<br>
-<br>
 <ul id="vote_history">
   <% if @story.votes.empty? %>
     <em>no votes yet</em>

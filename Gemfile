@@ -54,3 +54,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Extras
 gem 'rails-controller-testing', '~> 1.0.1'
+
+gem 'pry'
