@@ -22,7 +22,7 @@ class StoriesController < ApplicationController
     @story = Story.find(params[:id])
   end
 
-  private
+private
   def story_params
     params.require(:story).permit(:name, :link)
   end
