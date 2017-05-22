@@ -16,4 +16,8 @@ class VoteTest < ActiveSupport::TestCase
     assert_equal 3, stories(:one).votes.latest.size
   end
 
+  test "is associated with a user" do
+    assert_equal users(:jesse), votes(:one).user
+  end
+
 end

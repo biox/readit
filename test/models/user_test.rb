@@ -7,4 +7,9 @@ class UserTest < ActiveSupport::TestCase
     assert users(:jesse).stories.includes stories(:one)
   end
 
+  test "has a vote association" do
+    assert_equal 1, users(:jesse).votes.size
+    assert users(:jesse).votes.includes votes(:two)
+  end
+
 end
